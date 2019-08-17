@@ -11,7 +11,18 @@ The datasets are provided as a part of [Centre for Immersive Visual Technologies
 
 
 # How to cite
-In review, until acceptance, you can cite this page.
+Please cite the following if you use the dataset and/or the code.
+@article{ali2019methods,
+  title={Methods for Simultaneous Robot-World-Hand--Eye Calibration: A Comparative Study},
+  author={Ali, Ihtisham and Suominen, Olli and Gotchev, Atanas and Morales, Emilio Ruiz},
+  journal={Sensors},
+  volume={19},
+  number={12},
+  pages={2837},
+  year={2019},
+  doi= {https://doi.org/10.3390/s19122837},
+  publisher={Multidisciplinary Digital Publishing Institute}
+}
 
 # Dependencies
 The code is dependent on Matlab and some of its toolkits such as Computer Vision Toolbox.

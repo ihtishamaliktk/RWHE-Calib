@@ -12,7 +12,7 @@ calibImgFullname=strcat(calibImgPath,calibImgNames);
 
 
 % Detect checkerboards in images
-[imagePoints, boardSize, imagesUsed] = detectCheckerboardPoints(calibImgFullname, 'showProgressBar', 1);
+[imagePoints, boardSize, imagesUsed] = detectCheckerboardPoints(calibImgFullname,'MinCornerMetric',0.12, 'showProgressBar', 1);
 calibImgNames = calibImgNames(imagesUsed); %checken!!!
 imagePointsO=imagePoints;
 % Generate world coordinates of the corners of the squares
@@ -54,7 +54,7 @@ imgSize = size(img);
 %             [img, newOrigin] = undistortImage(orgImg, cameraParams, 'OutputView', 'full');
             [img, newOrigin] = undistortImage(orgImg, cameraParams);
 
-            [imagePoints(:,:,i), ~] = detectCheckerboardPoints(img);
+            [imagePoints(:,:,i), ~] = detectCheckerboardPoints(img ,'MinCornerMetric',0.12);
             UndistoredImgNPts{i,1}=img; % storing the undistored images
             UndistoredImgNPts{i,2}=imagePoints(:,:,i); % storing the corner pts of undistored images
             
